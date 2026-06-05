@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AREON Research Explorer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="icon" href="images/icon.svg">
+	<link rel="apple-touch-icon" href="images/icon.svg">
+	<style>
+		.logo{width:40px;height:40px;vertical-align:middle;margin-right:8px}
+		.header-inner .brand{display:inline-flex;align-items:center;gap:8px;font-weight:600}
+	</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<div class="brand"><img src="images/icon.svg" alt="AREON logo" class="logo">AREON</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="publications.html">Publications</a>
+<a href="survey.html">Survey</a>
+<a href="data.html">Data</a>
+<a href="results.html">Results</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="hero-grid">
+<div class="hero-copy">
+<span>Interactive Research Platform</span>
+<h1>AREON: Academic Research on School Social Interaction</h1>
+<p>See how local school social interaction data connects to achievement, and discover AREON insights through interactive research summaries, results, and a sample survey experience.</p>
+<div class="hero-buttons">
+<a href="about.html">About AREON</a>
+<a href="results.html">View Results</a>
+<a href="survey.html">Sample Survey</a>
+</div>
+<div class="hero-note">
+<span>Local survey data from BeteSeb Academy</span>
+<span>Interactive charts for low, middle, and high achievers</span>
+<span>Sample survey built on classroom interaction themes</span>
+</div>
+</div>
+<div class="hero-visual">
+	<div class="hero-slider" aria-hidden="false">
+	<div class="slide active" role="img" aria-label="Students studying together in a classroom setting">
+		<img src="images/hero-1.jpg" alt="Students studying together in a classroom setting">
+	</div>
+	<div class="slide" role="img" aria-label="Peer interaction photo">
+		<img src="images/hero-2.png" alt="Peer interaction photo">
+	</div>
+	<div class="slide" role="img" aria-label="Collaborative peer learning illustration">
+		<img src="images/hero-3.png" alt="Collaborative peer learning illustration">
+		</div>
+	</div>
+</div>
+</div>
+</section>
+<section id="overview" class="section">
+<h2>About AREON</h2>
+<p>AREON presents a local study of BeteSeb Academy Ayertena Branch students, focusing on the effect of peer interaction, teacher support, and school social interaction on academic performance. The site turns the research into an interactive experience with summaries, data visualization, and actionable recommendations.</p>
+<div class="grid">
+<div class="card"><h3>Peer Interaction</h3><p>Explore how peer discussion, group study, encouragement, and social comfort influence student engagement and learning outcomes.</p></div>
+<div class="card"><h3>Teacher Relationships</h3><p>Learn how respect, encouragement, constructive feedback, and approachability affect confidence, classroom participation, and academic success.</p></div>
+<div class="card"><h3>School Climate</h3><p>See why positive social environment, discipline, and conflict management matter for motivation, focus, and overall academic performance.</p></div>
+</div>
+</section>
+<section id="highlights" class="section">
+<h2>Interactive Findings</h2>
+<p>AREON uses real survey-inspired research themes to highlight the strongest influences on student performance in this local study.</p>
+<div class="grid">
+<div class="chart-card"><canvas id="impactChart"></canvas></div>
+<div class="stats-grid">
+<div class="stat"><strong>236</strong><span>students participated in the survey-based study.</span></div>
+<div class="stat"><strong>3</strong><span>main social dimensions analyzed: peer, teacher, and school climate.</span></div>
+<div class="stat"><strong>5</strong><span>chapters summarize the research from introduction through recommendations.</span></div>
+</div>
+</div>
+</section>
+<section id="chapters" class="section">
+<h2>Paper Explorer</h2>
+<p>Open each chapter below to read the summary and key conclusions from the research.</p>
+<input type="search" id="searchChapters" placeholder="Search chapter topics, terms, or keywords" aria-label="Search chapter content">
+<div class="accordion">
+<details open><summary>Chapter 1: Introduction</summary><div class="details-content"><p>The study examines how peer interaction, teacher-student relationships, and school social interaction affect academic performance of Grade 9 and 10 students at BeteSeb Academy. It highlights the importance of social environments, positive peer groups, and supportive teacher behavior for student motivation and achievement.</p></div></details>
+<details><summary>Chapter 2: Literature Review</summary><div class="details-content"><p>This chapter reviews Social Constructivism, Self-Determination Theory, Attachment Theory, and Ecological Systems Theory. It shows that academic learning is shaped by collaborative peer dialogue, teacher support, and a positive school climate.</p></div></details>
+<details><summary>Chapter 3: Methodology</summary><div class="details-content"><p>A quantitative, correlational, cross-sectional design was used with 236 Grade 9 and 10 students. The research applied stratified sampling, questionnaires, descriptive statistics, and Pearson correlation to measure relationships among peer interaction, teacher support, and academic performance.</p></div></details>
+<details><summary>Chapter 4: Results & Discussion</summary><div class="details-content"><p>Findings reveal that middle and high achievers report stronger peer collaboration and teacher support. Peer interaction, teacher interaction, and school climate all show significant positive correlations, while conflict and distraction remain important challenges to address.</p></div></details>
+<details><summary>Chapter 5: Conclusions & Recommendations</summary><div class="details-content"><p>The study concludes that a supportive school social environment, positive teacher relations, and structured peer collaboration can improve academic outcomes. Recommendations include peer-support programs, teacher training on communication, and school-level activities that strengthen belonging.</p></div></details>
+</div>
+</section>
+<section id="takeaways" class="section">
+<h2>Key AREON Insights</h2>
+<div class="highlight-list">
+<div class="highlight"><strong>Positive peer groups matter.</strong><p>Students who discuss lessons, study together, and encourage each other tend to be more engaged and perform better academically.</p></div>
+<div class="highlight"><strong>Teacher support is a differentiator.</strong><p>Respectful, approachable teachers who provide feedback help students feel confident and motivated to perform well.</p></div>
+<div class="highlight"><strong>The school environment is the context.</strong><p>A healthy social climate amplifies the benefits of peer and teacher interactions while minimizing conflict and distraction.</p></div>
+<div class="highlight"><strong>Low achievers need targeted support.</strong><p>The research shows lower-performing students often report weaker peer collaboration and teacher support, highlighting where interventions are most needed.</p></div>
+</div>
+<div class="callout"><p>Use the chapter explorer to jump directly to the topic you want.</p></div>
+</section>
+</main>
+<footer><p>AREON Research Explorer — Powered by local study data from BeteSeb Academy, Ayertena Branch.</p></footer>
+<script>
+const ctx = document.getElementById('impactChart');
+const searchInput = document.getElementById('searchChapters');
+function buildChart(data){ new Chart(ctx,{type:'doughnut',data:{labels:data.labels,datasets:[{data:data.data,backgroundColor:data.colors,borderWidth:0}]},options:{plugins:{legend:{position:'bottom',labels:{color:'#0f172a'}}},cutout:'55%',responsive:true}}); }
+fetch('/api/results').then(r=>r.json()).then(buildChart).catch(()=>buildChart({labels:['Peer','Teacher','School'],data:[45,35,20],colors:['#2563eb','#60a5fa','#93c5fd']}));
+searchInput.addEventListener('input',()=>{const needle=searchInput.value.trim().toLowerCase();document.querySelectorAll('.accordion details').forEach(detail=>{const text=(detail.querySelector('summary').textContent+detail.querySelector('.details-content').textContent).toLowerCase();detail.style.display=text.includes(needle)?'block':'none';});});
+const pagePath = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('nav a').forEach(link => {
+  if (link.getAttribute('href') === pagePath) {
+    link.classList.add('active');
+  }
+});
+</script>
+<script>
+// Hero slider: cycle slides every 4 seconds
+;(function(){
+	const slides = document.querySelectorAll('.hero-slider .slide');
+	if(!slides || slides.length < 2) return;
+	let idx = 0;
+	setInterval(()=>{
+		slides[idx].classList.remove('active');
+		idx = (idx + 1) % slides.length;
+		slides[idx].classList.add('active');
+	}, 4000);
+})();
+</script>
+<script>
+// Fallback: if a slide image fails to load, replace it with an inline SVG placeholder
+(function(){
+	const imgs = document.querySelectorAll('.hero-slider .slide img');
+	if(!imgs || imgs.length===0) return;
+	imgs.forEach(img=>{
+		img.addEventListener('error', ()=>{
+			const wrapper = img.closest('.slide');
+			if(!wrapper) return;
+			const svg = `data:image/svg+xml;utf8,` + encodeURIComponent(`
+				<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'>
+					<defs>
+						<linearGradient id='g' x1='0' x2='1'>
+							<stop offset='0' stop-color='#e6f0ff'/>
+							<stop offset='1' stop-color='#f8fbff'/>
+						</linearGradient>
+					</defs>
+					<rect width='1200' height='800' fill='url(#g)' />
+					<g transform='translate(120,160)' fill='#1e3a8a'>
+						<rect x='0' y='0' width='200' height='260' rx='8' fill='#fff' stroke='#cfe3ff'/>
+						<rect x='220' y='20' width='780' height='120' rx='8' fill='#fff' stroke='#cfe3ff'/>
+						<text x='220' y='180' font-size='36' fill='#0f172a' font-family='Inter, Arial'>School image unavailable</text>
+						<text x='220' y='220' font-size='20' fill='#475569' font-family='Inter, Arial'>Showing placeholder until image loads</text>
+					</g>
+				</svg>`);
+			const fallbackImg = document.createElement('img');
+			fallbackImg.src = svg;
+			fallbackImg.alt = 'School image placeholder';
+			fallbackImg.style.width = '100%';
+			fallbackImg.style.height = '100%';
+			fallbackImg.style.objectFit = 'cover';
+			wrapper.innerHTML = '';
+			wrapper.appendChild(fallbackImg);
+		});
+	});
+})();
+</script>
+</body>
+</html>

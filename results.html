@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AREON - Results</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="images/icon.svg">
+<link rel="apple-touch-icon" href="images/icon.svg">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<div class="brand"><img src="images/icon.svg" alt="AREON logo" class="logo">AREON</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="publications.html">Publications</a>
+<a href="survey.html">Survey</a>
+<a href="data.html">Data</a>
+<a href="results.html">Results</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="section">
+<h1>Results &amp; Discussion</h1>
+<p>This page summarizes the main findings from the AREON study at BeteSeb Academy, Ayertena Branch. The results are based on responses from 236 Grade 9 and 10 students and 12 teachers.</p>
+<div class="callout">
+<p>The charts below are interactive Chart.js circles. Hover over any colored segment to see the exact percent values and better understand how the survey responses are distributed.</p>
+</div>
+</section>
+<section class="section">
+<h2>Key Findings</h2>
+<div class="grid">
+<div class="card"><h3>Peer interaction matters</h3><p>Students who discuss lessons with classmates and participate in group study tend to show higher achievement than those who study alone.</p></div>
+<div class="card"><h3>Teacher support matters</h3><p>Teacher encouragement, respect, and clear feedback are strongly linked to student confidence and academic success.</p></div>
+<div class="card"><h3>School climate matters</h3><p>Comfort in social interaction and engagement with school activities supports better motivation and learning.</p></div>
+</div>
+</section>
+<section class="section" id="demographics">
+<h2>Respondent Demographics</h2>
+<div class="grid">
+<div class="stat"><strong>55.5%</strong><span>Female students</span></div>
+<div class="stat"><strong>44.5%</strong><span>Male students</span></div>
+<div class="stat"><strong>55.1%</strong><span>Grade 9 students</span></div>
+<div class="stat"><strong>44.9%</strong><span>Grade 10 students</span></div>
+<div class="stat"><strong>80%</strong><span>Ages 15–16</span></div>
+<div class="stat"><strong>236</strong><span>Total student respondents</span></div>
+</div>
+</section>
+<section class="section" id="interactive-results">
+<h2>Interactive Circle Results</h2>
+<p>Each chart below is an interactive circle chart. Hover or tap the segments to see the exact values for response agreement and how groups compare.</p>
+<div class="grid">
+<div class="chart-card"><h3>Peer Discussion</h3><canvas id="peerDiscussionChart"></canvas><p>How students rated the value of discussing lessons with classmates.</p></div>
+<div class="chart-card"><h3>Group Study</h3><canvas id="groupStudyChart"></canvas><p>How students rated their participation in group study and shared learning.</p></div>
+<div class="chart-card"><h3>Teacher Encouragement</h3><canvas id="teacherEncouragementChart"></canvas><p>The degree to which students feel teachers encourage them to perform well.</p></div>
+<div class="chart-card"><h3>Social Comfort</h3><canvas id="socialComfortChart"></canvas><p>How comfortable students feel interacting with peers at school.</p></div>
+<div class="chart-card"><h3>School Activity Impact</h3><canvas id="activityImpactChart"></canvas><p>How students perceive the impact of school activities on their learning experience.</p></div>
+</div>
+</section>
+<section class="section" id="correlations">
+<h2>Correlation Findings</h2>
+<div class="grid">
+<div class="card"><h3>Peer &amp; Teacher</h3><p>Correlation = .421 (p &lt; .01)</p></div>
+<div class="card"><h3>Peer &amp; School Climate</h3><p>Correlation = .460 (p &lt; .01)</p></div>
+<div class="card"><h3>Teacher &amp; School Climate</h3><p>Correlation = .388 (p &lt; .01)</p></div>
+</div>
+<p>These values show that stronger peer relationships and better teacher interaction are both associated with a more positive school climate and improved academic outcomes.</p>
+</section>
+<section class="section">
+<h2>Conclusions</h2>
+<ul style="margin-top:18px;line-height:1.9;color:#475569;">
+<li>Peer discussion and group study are linked with higher student achievement.</li>
+<li>Teacher encouragement and support play a key role in student motivation.</li>
+<li>A welcoming school social environment helps students feel more engaged and confident.</li>
+</ul>
+</section>
+</main>
+<footer>
+© 2026 AREON
+</footer>
+<script>
+const chartOptions = {plugins:{legend:{position:'bottom',labels:{color:'#0f172a'}}},responsive:true};
+new Chart(document.getElementById('peerDiscussionChart'),{type:'doughnut',data:{labels:['Strongly Agree','Agree','Neutral','Disagree','Strongly Disagree'],datasets:[{label:'Peer Discussion',data:[18.3,52.3,17.4,8.3,3.7],backgroundColor:['#2563eb','#60a5fa','#fbbf24','#f97316','#ef4444']} ]},options:chartOptions});
+new Chart(document.getElementById('groupStudyChart'),{type:'doughnut',data:{labels:['Strongly Agree','Agree','Neutral','Disagree','Strongly Disagree'],datasets:[{label:'Group Study',data:[27.3,38.0,19.3,9.8,5.6],backgroundColor:['#16a34a','#4ade80','#fbbf24','#f59e0b','#ef4444']} ]},options:chartOptions});
+new Chart(document.getElementById('teacherEncouragementChart'),{type:'doughnut',data:{labels:['Agree + Strongly Agree','Neutral','Disagree'],datasets:[{data:[59.3,26.7,14.0],backgroundColor:['#2563eb','#fbbf24','#ef4444']} ]},options:chartOptions});
+new Chart(document.getElementById('socialComfortChart'),{type:'doughnut',data:{labels:['Agree + Strongly Agree','Neutral','Disagree'],datasets:[{data:[67.4,21.6,11.0],backgroundColor:['#2563eb','#fbbf24','#ef4444']} ]},options:chartOptions});
+new Chart(document.getElementById('activityImpactChart'),{type:'doughnut',data:{labels:['Agree + Strongly Agree','Neutral','Disagree'],datasets:[{data:[69.1,22.0,9.0],backgroundColor:['#2563eb','#fbbf24','#ef4444']} ]},options:chartOptions});
+</script>
+</body>
+</html>

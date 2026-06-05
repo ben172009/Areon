@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AREON - Contact</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="images/icon.svg">
+<link rel="apple-touch-icon" href="images/icon.svg">
+
+</head>
+
+<body>
+
+<header>
+<div class="header-inner">
+<div class="brand"><img src="images/icon.svg" alt="AREON logo" class="logo">AREON</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="publications.html">Publications</a>
+<a href="survey.html">Survey</a>
+<a href="data.html">Data</a>
+<a href="results.html">Results</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<p style="margin-bottom:30px; font-size:18px;">
+We welcome collaborations and inquiries. Feel free to reach out using the form below or through our contact information.
+</p>
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-bottom:40px;">
+
+<div>
+<h3 style="color:#1e3a8a;">Address</h3>
+<p>
+A.A,Ayertena
+</p>
+</div>
+
+<div>
+<h3 style="color:#1e3a8a;">Contact Information</h3>
+<p>
+Email: <a href="mailto:masetro13@gmail.com" style="color:#1e3a8a; text-decoration:none;">masetro13@gmail.com</a>
+</p>
+</div>
+
+</div>
+
+<div style="margin-bottom:40px;">
+  <h3 style="color:#1e3a8a;">Sign Up</h3>
+  <p>Enter your email to request an AREON signup and receive updates.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;">
+    <a href="https://accounts.google.com/signin" class="auth-button google" target="_blank" rel="noopener noreferrer">Continue with Google</a>
+  </div>
+
+  <p style="margin:24px 0 12px;font-weight:600;">Or sign up with email</p>
+  <form id="signupForm" style="display:grid;gap:14px;max-width:520px;">
+    <input id="signupEmail" type="email" placeholder="Enter your email" required style="width:100%;padding:14px 16px;border:1px solid rgba(148,163,184,0.32);border-radius:16px;background:#f8fafc;color:#0f172a;outline:none;font-size:1rem;">
+    <button type="submit">Sign Up</button>
+    <p id="signupFeedback" style="margin-top:8px;font-weight:600;color:#1e3a8a;"></p>
+  </form>
+  <div style="margin-top:40px;">
+    <h3 style="color:#1e3a8a;">Leave a Message</h3>
+    <p>Write your message below and click Send Message to open Gmail and compose an email to masetro13@gmail.com.</p>
+    <form id="feedbackForm" style="display:grid;gap:14px;max-width:520px;">
+      <textarea id="feedbackMessage" rows="6" placeholder="Write your message here..." required style="width:100%;padding:14px 16px;border:1px solid rgba(148,163,184,0.32);border-radius:16px;background:#f8fafc;color:#0f172a;outline:none;font-size:1rem;"></textarea>
+      <button type="submit">Send Message</button>
+      <p id="feedbackStatus" style="margin-top:8px;font-weight:600;color:#1e3a8a;"></p>
+    </form>
+  </div>
+</div>
+
+</section>
+
+<footer>
+© 2026 AREON
+</footer>
+
+<script>
+const signupForm = document.getElementById('signupForm');
+const signupEmail = document.getElementById('signupEmail');
+const signupFeedback = document.getElementById('signupFeedback');
+
+signupForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const email = signupEmail.value.trim();
+
+  if (!email) {
+    signupFeedback.textContent = 'Please enter your email address.';
+    signupFeedback.style.color = '#dc2626';
+    return;
+  }
+
+  const subject = encodeURIComponent('AREON Signup Request');
+  const body = encodeURIComponent(`I would like to sign up for AREON updates. My email is: ${email}`);
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=masetro13@gmail.com&su=${subject}&body=${body}`;
+
+  signupFeedback.textContent = 'Opening Gmail to send your signup request...';
+  signupFeedback.style.color = '#1e3a8a';
+  window.open(gmailLink, '_blank');
+});
+
+const feedbackForm = document.getElementById('feedbackForm');
+const feedbackMessage = document.getElementById('feedbackMessage');
+const feedbackStatus = document.getElementById('feedbackStatus');
+
+feedbackForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const message = feedbackMessage.value.trim();
+
+  if (!message) {
+    feedbackStatus.textContent = 'Please enter your message before sending.';
+    feedbackStatus.style.color = '#dc2626';
+    return;
+  }
+
+  const subject = encodeURIComponent('AREON Message');
+  const body = encodeURIComponent(message);
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=masetro13@gmail.com&su=${subject}&body=${body}`;
+
+  feedbackStatus.textContent = 'Opening Gmail to send your message...';
+  feedbackStatus.style.color = '#1e3a8a';
+  window.open(gmailLink, '_blank');
+});
+</script>
+
+</body>
+</html>
